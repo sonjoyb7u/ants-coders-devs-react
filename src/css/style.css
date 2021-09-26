@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*==================================================
+ * Body css ...
+ * ===============================================*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+#developers {
+    position: relative;
+    background-image: url('/assets/img/developer_banner_3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#developers:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #009FFF;
+    background: -webkit-linear-gradient(to left, #ec2F4B, #009FFF);
+    background: linear-gradient(to bottom, #ec2F4B, #009FFF);
+    opacity: 0.9;
+    z-index: 99;
+}
+/*==================================================
+ * Button css ...
+ * ===============================================*/
+.btn-grad-md {
+    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+         
+}
+.btn-grad-md:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+.btn-grad-sm {
+    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    margin: 10px;
+    padding: 8px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 6px;
+    display: block;
+         
+}
+.btn-grad-sm:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+/*==================================================
+ * Header - Navbar css ...
+ * ===============================================*/
+.site-navbar {
+    position: relative;
+    /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+    /* border: 2px solid #fff; */
+    border-radius: 10px;
+    z-index: 999;
+}
+.site-navbar ul li a {
+    color: #fff;
+    font-weight: 500;
+}
+.site-navbar ul li a.active {
+    color: #FFCC70;
+    font-weight: 700;
+}
+.nav-toggle {
+    background-color: transparent;
+    border: 2px solid #FC466B;
+    outline: none;
+}
+.nav-toggle-icon {
+    color: #fff;
+    font-size: 25x;
+    line-height: 1.5;
+}
+/* SEARCH HERE STYLES  */
+.search-box .search-here {
+    position: relative;
+    padding-right: 35px; 
+    border-radius: 20px;
+}
+.search-box input:focus {
+    border-color: rgb(146, 145, 145);
+    box-shadow: none;
+    outline: none;
+    background: #fff;
+}
+.search-icon {
+    position: absolute;
+    width: 36px;
+    height: auto;
+    cursor: pointer;
+    /* background: #FC466B; */
+    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    border: none;
+    border-radius: 0 20px 20px 0;
+    outline: none;
+    line-height: 38px;
+    margin-left: 218px;
+
+}
+.search-icon:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}             
+.search-icon i {
+    /* position: relative; */
+    width: 35px;
+    height: auto;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+
+}
+/*==================================================
+ * Banner section css ...
+ * ===============================================*/
+.developer-banner {
+    /* background: url('./../img/developer_banner_1.jpg'); */
+    /* background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% ); */
+    background: transparent;
+    /* border: 1px solid #fff; */
+    box-shadow: 3px 3px 15px 5px #61045F;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 10px;
+    z-index: 9999;
+
+}
+.banner-img {
+    width: 370px;
+    height: 290px;
+}
+/*==================================================
+ * Teams Section css ...
+ * ===============================================*/
+.teams {
+    position: relative;
+    z-index: 9999;
+}
+.team-member {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid #61045F; */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+    box-shadow: 3px 3px 15px 5px #61045F;
+}
+.card-img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% ); */
+}
+.divider {
+    border-bottom: 2px solid rgb(255,145,83);
+    /* border-radius: 0 0 5px 5px; */
+}
+img.img-effect {
+  transition: transform 2s ease-in;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img-effect:hover {
+  transform: scale(1) rotate(360deg);
+}
+.member-details {
+  position: relative;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  /* height: 50%; */
+  transition: .8s ease-in;
+  backface-visibility: hidden;
+}
+.card-footer {
+  transition: .7s ease-in;
+  opacity: 0;
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #61045f69;
+  width: 100%;
+  /* height: 60%; */
+  border-radius: 5px;
+}
+.card-footer button {
+    margin: 50px auto;
+}
+.team-member:hover .member-details {
+  opacity: 0.3;
+}
+.team-member:hover .card-footer {
+  opacity: 1;
+}
+.member-social-icon i {
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+    margin-right: 10px;
+    background: #61045F;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.team-members {
+    background-color: transparent;
+    /* border: 2px solid #fff; */
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 5px #61045F;
+    padding: 6px;
+}
+.team-members h5 {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+    padding: 5px;
+    border-radius: 5px;
+}
+.hire-developers {
+   background: transparent;
+   /* border: 2px solid #fff; */
+    box-shadow: 3px 3px 15px 5px #61045F;
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+}
+.selected-developer {
+     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+}
+.footer {
+    position: relative;
+    /* background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background-image: radial-gradient( circle 976px at 51.2% 51%,  rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+    z-index: 999;
+}
+
+/* ---------------------------------------*\
+    Hire a Developer Section ...
+/* -------------------------------------- */
+/* .blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 26px 40px;
+    margin-top: 11.080px;
+    margin-bottom: 12px;
+}
+.blog {
+    display: flex;
+    align-items: center;
+}
+.blog .thumbnail img {
+    width: 177px;
+    height: 117px;
+}
+.blog-info {
+    margin-left: 16px;
+}
+.blog-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+.blog-author {
+    color: #9F9F9F;
+    font-size: 16px;
+}
+.blog-author a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #562EFF;
+} */
+
+
+
+
