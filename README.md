@@ -11,6 +11,10 @@ Find & Hire Top Rated Software, Web Developers & Designers Inexpensively. World'
 ## Features:
 - Search & Hire Web Developers & Designers For Built Your Own Team / Company.
 - Top Rated Web-Based Online Software Application Products Sales By Freelancer Engineer's.
+- Hire Developer & Added To List Box.
+- Display Total Selected Developers & Total Costs.
+- Deleted Selected Developers By Using Cross Button.
+- Don't Added Duplicate Team Members Without Page Reload.
 - Very Useful Guidance And Analysis.
 - 24/7 Hours Online Supporting.
 
