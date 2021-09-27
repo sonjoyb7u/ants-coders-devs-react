@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Rating from 'react-rating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -7,12 +7,20 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const Developer = (props) => {
     const faArrowRightIcon = <FontAwesomeIcon icon={faArrowRight} />
     const developer = props.developer
-    const eventHandleHireDevBtn = props.eventHandleHireDevBtn
+    const disabledHide = props.disableHideStatus
+    console.log(disabledHide);
+
+    const [isDisabled, setDisabled] = useState();
+  
+    const handleHireDeveloperBtn = (params) => {
+        setDisabled(params);
+    }
+   
 
     return (
         <div className="col-4">
             
-                <div className="card w-100 team-member">
+                <div className="card team-member">
                     <img src={developer.picture.thumbnail_1} className="img-fluid card-img img-effect" alt="..." />
                     <h5 className="card-title text-light mx-auto">{developer.name.title} {developer.name.first} {developer.name.last}</h5>
                     <span className="divider"></span>
@@ -37,12 +45,15 @@ const Developer = (props) => {
                         </div>
 
                     </div>
-                    <div className="card-footer">
-                        <button onClick={()=>eventHandleHireDevBtn(developer)} className="btn btn-success btn-sm text-uppercase btn-grad-sm mx-auto">hire me &nbsp;&nbsp;<span>{faArrowRightIcon}</span></button>
-                        <div className="member-social-icon">
-                            <span><i class="fab fa-facebook"></i></span>
-                            <span><i class="fab fa-linkedin"></i></span>
-                            <span><i class="fab fa-github"></i></span>
+                    <div className="card-footer card-hire-info">
+                        <button onClick={()=>{
+                                props.eventHandleHireDevBtn(developer)
+                                handleHireDeveloperBtn(true)    
+                            }} className="btn btn-success btn-sm text-uppercase btn-grad-sm mx-auto" disabled={isDisabled} >hire me &nbsp;&nbsp;<span>{faArrowRightIcon}</span></button>
+                        <div className="member-social-icon mt-5">
+                            <span><i className="fab fa-facebook"></i></span>
+                            <span><i className="fab fa-linkedin"></i></span>
+                            <span><i className="fab fa-github"></i></span>
                         </div>
                     </div>
                 </div>

@@ -13,9 +13,10 @@ body {
 }
 #developers {
     position: relative;
-    background-image: url('./images/developer_banner_1.jpg');
-    background-position: center;
+    background-image: url("/src/assets/images/developer_banner_2.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -27,17 +28,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #009FFF;
     background: -webkit-linear-gradient(to left, #ec2F4B, #009FFF);
     background: linear-gradient(to bottom, #ec2F4B, #009FFF);
-    opacity: 0.9;
+    opacity: 0.2;
     z-index: 99;
 }
 /*==================================================
  * Button css ...
  * ===============================================*/
 .btn-grad-md {
-    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    background-image: linear-gradient(to right, #ec2F4B 0%, #009FFF  51%, #ec2F4B  100%);
     margin: 10px;
     padding: 15px 45px;
     text-align: center;
@@ -51,12 +51,12 @@ body {
          
 }
 .btn-grad-md:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
     color: #fff;
     text-decoration: none;
 }
 .btn-grad-sm {
-    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    background-image: linear-gradient(to right, #ec2F4B 0%, #009FFF  51%, #ec2F4B  100%);
     margin: 10px;
     padding: 8px 20px;
     text-align: center;
@@ -94,6 +94,9 @@ body {
     color: #FFCC70;
     font-weight: 700;
 }
+.site-navbar ul li a:hover{
+    color: #FFCC70;
+}
 .nav-toggle {
     background-color: transparent;
     border: 2px solid #FC466B;
@@ -124,7 +127,7 @@ body {
     cursor: pointer;
     text-align: center;
     /* background: #FC466B; */
-    background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
+    background-image: linear-gradient(to right, #ec2F4B 0%, #009FFF  100%);
     color: #fff;
     border: none;
     outline: none;
@@ -148,47 +151,48 @@ body {
  * Banner section css ...
  * ===============================================*/
 .developer-banner {
-    /* background: url('./../img/developer_banner_1.jpg'); */
-    /* background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% ); */
-    background: transparent;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
     /* border: 1px solid #fff; */
     box-shadow: 2px 2px 20px 5px rgb(13, 13, 14);
     width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    height: 50%;
     border-radius: 10px;
     z-index: 9999;
 
 }
 .banner-img {
-    width: 370px;
-    height: 290px;
+    width: 100%;
+    height: 450px;
 }
 /*==================================================
  * Teams Section css ...
  * ===============================================*/
 .teams {
     position: relative;
-    z-index: 9999;
+    z-index: 9999999;
+}
+.teams-bread {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+    box-shadow: 2px 2px 20px 5px rgb(13, 13, 14);
+    padding: 10px;
+    border-radius: 10px;
 }
 .team-member {
     width: 100%;
-    height: 90%;
+    height: 95%;
     /* border: 2px solid #61045F; */
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
     box-shadow: 2px 2px 10px 5px rgb(13, 13, 14);
+    border-radius: 10px 0 10px 10px;
+
 }
 .card-img {
-    width: 100%;
-    height: auto;
     margin: 0 auto;
-    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% ); */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(67, 255, 177, 0.8) 0%, rgba(255,145,83,1) 90% );
+    border-radius: 120px 0 120px 0px;
 }
 .divider {
-    border-bottom: 2px solid rgb(255,145,83);
-    /* border-radius: 0 0 5px 5px; */
+    border: 1px solid rgb(255,145,83);
 }
 img.img-effect {
   transition: transform 2s ease-in;
@@ -209,25 +213,22 @@ img.img-effect {
   transition: .8s ease-in;
   backface-visibility: hidden;
 }
-.card-footer {
+.card-hire-info {
   transition: .7s ease-in;
   opacity: 0;
   position: absolute;
-  top: 77%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
-  background-color: #61045f69;
   width: 100%;
-  /* height: 60%; */
+  height: auto;
   border-radius: 5px;
-}
-.card-footer button {
-    margin: 50px auto;
+  margin-top: 50%;
 }
 .team-member:hover .member-details {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 .team-member:hover .card-footer {
   opacity: 1;
@@ -252,17 +253,16 @@ img.img-effect {
     cursor: pointer;
 }
 /* ---------------------------------------*\
-    Team Menbers Section ...
+    Hire Menbers Section ...
 /* -------------------------------------- */
-.team-members {
-    background-color: transparent;
+.hire-members {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
     /* border: 2px solid #fff; */
     border-radius: 5px;
     box-shadow: 2px 2px 15px 5px rgb(13, 13, 14);
     padding: 6px;
 }
-.team-members h5 {
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% );
+.hire-members h5, h6 {
     padding: 5px;
     border-radius: 5px;
 }
@@ -270,7 +270,7 @@ img.img-effect {
     Hire a Developer Section ...
 /* -------------------------------------- */
 .hire-developers {
-   background: transparent;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
    /* border: 2px solid #fff; */
     box-shadow: 2px 2px 15px 5px rgb(13, 13, 14);
     width: 100%;
@@ -278,7 +278,12 @@ img.img-effect {
     overflow-y: hidden;
 }
 .selected-developer {
-     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(67, 255, 177, 0.8) 0%, rgba(255,145,83,1) 90% );
+    border-radius: 7px;
+
+}
+.hide-content {
+  display: none;
 }
 .footer {
     position: relative;

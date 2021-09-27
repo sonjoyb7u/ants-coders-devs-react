@@ -1,5 +1,5 @@
 import React from 'react';
-import NavbarLogo from './../../images/developer_logo_2.png'
+import NavbarLogo from './../../assets/images/developer_logo_2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,7 +16,7 @@ const Header = () => {
                             <nav className="navbar navbar-expand-lg">
                                 <a className="navbar-brand me-3" href="/">
                                     <img width="55" className="d-inline-block rounded-3" src={NavbarLogo} alt="Site Logo" />
-                                    <span className="text-white text-uppercase font-bold">Ant's Coders</span>
+                                    <span className="text-white text-uppercase font-bold">  Ant's Coders</span>
                                 </a>
                                 <button className="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

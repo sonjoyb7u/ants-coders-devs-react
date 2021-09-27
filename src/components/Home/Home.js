@@ -7,12 +7,15 @@ import Header from '../Header/Header';
 const Home = () => {
 
     const [developers, setDevelopers] = useState([])
+    const requiredBudget = 120000
 
     useEffect( ()=>{
         const url = '/developers.JSON';
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setDevelopers(data.results))
+        .then(data=>{
+            setDevelopers(data.results)
+        })
         .catch(error => console.log(error))
 
     }, [])
@@ -21,7 +24,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <Banner></Banner>
+            <Banner requiredBudget={requiredBudget}></Banner>
             <main>
                 <Developers developers={developers} ></Developers>
             </main>
