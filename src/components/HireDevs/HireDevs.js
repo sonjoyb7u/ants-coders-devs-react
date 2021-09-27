@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import HireDev from './HireDev/HireDev';
@@ -11,7 +11,6 @@ const HireDevs = (props) => {
 
     let developerCount = 0
     let totalAmount = 0
-    // let decreaseTotalAmount = 0
     for (const hireDeveloper of  hiredDevelopers) {
         developerCount = hiredDevelopers.length
         totalAmount += hireDeveloper.salary

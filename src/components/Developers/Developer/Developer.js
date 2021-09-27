@@ -2,13 +2,11 @@ import React, {useState} from 'react';
 import Rating from 'react-rating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-// import {  } from '@fortawesome/fontawesome-svg-core'
 
 const Developer = (props) => {
     const faArrowRightIcon = <FontAwesomeIcon icon={faArrowRight} />
+
     const developer = props.developer
-    const disabledHide = props.disableHideStatus
-    console.log(disabledHide);
 
     const [isDisabled, setDisabled] = useState();
   

@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import HireDevs from '../HireDevs/HireDevs';
 import Developer from './Developer/Developer';
-// import Developer from './Developer/Developer';
 
 const Developers = (props) => {
     const developers = props.developers;
 
     const [developerData, setDeveloperData] = useState([])
 
-
     const eventHandleHireDevBtn = (newDeveloperAdd) => {
         const newDeveloperAdded = [...developerData, newDeveloperAdd]
-        // const isDeveloperExists = developers.find(developer => developer.email === newDeveloperAdd.email)
         setDeveloperData(newDeveloperAdded)
-        // console.log(developerData);
     }
 
 

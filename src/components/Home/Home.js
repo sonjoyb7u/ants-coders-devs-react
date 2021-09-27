@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 const Home = () => {
 
     const [developers, setDevelopers] = useState([])
-    const requiredBudget = 120000
+    const requiredBudget = 50
 
     useEffect( ()=>{
         const url = '/developers.JSON';

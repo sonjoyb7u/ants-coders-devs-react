@@ -1,7 +1,10 @@
 import React from 'react';
 import BannerImage from './../../assets/images/Mindo.gif'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 const Banner = (props) => {
+    const getStartIcon = <FontAwesomeIcon icon={faPlay} />
     return (
         <div>
             {/* BANNER SECTION ...  */}
@@ -15,8 +18,8 @@ const Banner = (props) => {
                                 <p className="text-capitalize mb-4">Find & hire top software, web developers & designers inexpensively. World's largest marketplace of 50m. Receive
                                 quotes in seconds. Get the web modern capabilities on your own sites & web-based apps with useful guidance and analysis from Ant's Coders
                                 Development sites.</p>
-                                <button type="button" className="btn btn-success btn-grad-md d-inline-block">Hire & Get Started</button>
-                                <h3 className="text-capitalize mb-3 d-inline-block">Required Budgets: ${props.requiredBudget} </h3>
+                                <button type="button" className="btn btn-success btn-grad-md d-inline-block font-bold">Hire & Get Started &nbsp; {getStartIcon}</button>
+                                <h3 className="text-capitalize mb-3 d-inline-block">Required Budgets: ${props.requiredBudget} MILLIONS </h3>
                             </div>
                         </div>
                         <div className="col-12 col-lg-4 col-md-4 col-sm-12">
