@@ -24,13 +24,11 @@ const HireDevs = (props) => {
             <section className="hire-members">
                 <div className="w-100 mx-auto text-white">
                     <div className="font-lighter mt-2 mb-3">
-                        <h5 className="font-extrabold d-inline-block mr-1">Total Member's:</h5><span className="bg-warning p-1 border border-2 font-bold rounded-3">{developerCount}</span>
-                        
+                        <h5 className="font-extrabold d-inline-block mr-1">Total Member's:</h5><span className="bg-warning p-1 border border-2 font-bold rounded-3">{developerCount}</span>                       
                     </div>
                     <div className="font-lighter mt-2 mb-4" >
                         <h5 className="font-extrabold">Total Amount: <span className="p-1 rounded-2">$ {totalAmount.toFixed(2)}</span></h5>     
-                    </div>
-                    
+                    </div>                   
                 </div>
             </section>
             {/* Select Developer Section ...  */}
@@ -38,15 +36,13 @@ const HireDevs = (props) => {
                 <h5 className="hire-developers-title text-capitalize">your selected developers: </h5>
                 <hr />
                 {
-                    hiredDevelopers.map(developer => <HireDev key={developer.email} developer={developer} eventHandleNotDisableBtn={props.eventHandleNotDisableBtn}></HireDev>)  
+                    hiredDevelopers.map(developer => <HireDev key={developer.id.name} developer={developer} eventHandleNotDisableBtn={props.eventHandleNotDisableBtn} eventHandlerMemberRemove={props.eventHandlerMemberRemove} memberHide={props.memberHide}></HireDev>)  
                 }
-               
                 <div className="buy-developers-btn p-2">
                     <button className="btn text-uppercase btn-grad-sm mx-auto">
                         <span>{faShoppingCartIcon}&nbsp;&nbsp; Create Team</span>
                     </button>
                 </div>
-
             </section>
         </div>
 

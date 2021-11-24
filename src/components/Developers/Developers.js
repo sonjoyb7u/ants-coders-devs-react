@@ -7,14 +7,27 @@ const Developers = (props) => {
 
     const [developerData, setDeveloperData] = useState([])
 
+    const [memberHide, setMemberHide] = useState()
+
     const eventHandleHireDevBtn = (newDeveloperAdd) => {
         const newDeveloperAdded = [...developerData, newDeveloperAdd]
         setDeveloperData(newDeveloperAdded)
     }
 
+    const eventHandlerMemberRemove = (member_id) => {
+        const isExists = developers.find(developer=>developer.id.name === member_id)
+        if(isExists) {
+            let hideMember = 'd-none'
+            setMemberHide(hideMember)
+        }
+        else {
+            console.log("No, console.log: Developers.js");
+        }
+    }
+
 
     return (
-        <div>
+        <>
             {/* Hire Developers SECTION ...  */}
             <section id="teams" className="container mt-5 teams">
                 <div className="d-flex justify-content-between align-items-center mb-4 teams-bread">
@@ -28,7 +41,7 @@ const Developers = (props) => {
                         <div className="row">
                             
                             {
-                                developers.map(developer => <Developer key={developer.email} developer={developer} eventHandleHireDevBtn={eventHandleHireDevBtn} ></Developer>)
+                                developers.map(developer => <Developer key={developer.id.name} developer={developer} eventHandleHireDevBtn={eventHandleHireDevBtn} ></Developer>)
                             }
                             
                         </div>
@@ -37,12 +50,12 @@ const Developers = (props) => {
 
                      {/* Right Side - Selected Hire Developers ...  */}
                     <div className="col-3">
-                        <HireDevs developers={developerData} ></HireDevs>
+                        <HireDevs developers={developerData} eventHandlerMemberRemove={eventHandlerMemberRemove} memberHide={memberHide}></HireDevs>
                     </div>
 
                 </div>
             </section>
-        </div>
+        </>
     );
 };
 
